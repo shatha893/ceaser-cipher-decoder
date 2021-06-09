@@ -1,0 +1,27 @@
+.Toolbar{ background-color:	#3CB371; }
+
+.root{ box-shadow:none; }
+
+.profilePic{
+    width:40px !important;
+    height:40px !important;
+    margin-right:1%;
+    background-color:white;
+}
+.profile{
+    color:white !important;
+}
+
+.title{
+    text-decoration:none;
+    color:white;
+}
+.typography{
+    flex-grow: 1
+}
+
+.typography a:hover{
+    text-decoration: none !important;
+    color:white !important;
+}
+
