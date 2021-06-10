@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import IconButton from '@material-ui/core/IconButton';
 import Image from 'react-bootstrap/Image';
+import CaeserDisk from '../Assets/wheel_img.jpg';
 import cssClasses from './header.module.css';
 import { withRouter } from 'react-router-dom';
 import Axios from 'axios';
@@ -27,8 +28,9 @@ const ButtonAppBar= (props)=> {
     <div className={classes.root}>
       <AppBar position="static" className={classes.AppBar}>
         <Toolbar className={cssClasses.Toolbar}>
-          
-          {/* <Logo/> */}
+
+          <img src={CaeserDisk} className={cssClasses.diskImg}/> 
+                 
           <Typography 
           variant="h6" 
           className={cssClasses.typography}>

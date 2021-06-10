@@ -1,0 +1,33 @@
+.cipherText{
+   margin-top:4% !important;
+   margin-bottom:4% !important;
+   margin-left:25% !important;
+}
+
+.textarea{ 
+   width:600px;
+   height:80px;
+   border-color:rgb(123, 124, 124) !important;
+   border-radius:5px !important;
+   margin-top:1%;
+}
+
+.textTitle{
+   font-size:larger;
+}
+
+.decodeBtn{
+   background-color: #3CB371 !important;
+   color:white;
+   font-size:15px;
+   border:none;
+    padding:10px 50px 10px 50px !important;
+    position:relative !important;
+    top:40px !important;
+    left:410px;
+    border-radius: 5px !important;
+}
+
+.content{
+   min-height: 100vh;
+}
