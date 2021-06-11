@@ -30,7 +30,7 @@ const ButtonAppBar= (props)=> {
           <Typography 
           variant="h6" 
           className={cssClasses.typography}>
-              Ceaser Decoder
+              Ceaser Cipher
           </Typography>
         </Toolbar>
       </AppBar>

@@ -1,32 +1,28 @@
+
 .cipherText{
    margin-top:4% !important;
    margin-bottom:4% !important;
-   margin-left:25% !important;
+   /* margin-left:25% !important; */
 }
 
 .textarea{ 
-   width:530px;
-   height:80px;
+   width:100px !important;
+   /* margin-top:10% !important; */
    border-color:rgb(123, 124, 124) !important;
-   border-radius:5px !important;
-   margin-top:1%;
 }
 
-.textTitle{
-   font-size:larger;
-   color:#30915b;
+.input{
+   margin-top:100px;
 }
 
 .decodeBtn{
+   /* margin-top:29% !important; */
    background-color: #3CB371 !important;
    color:white;
    font-size:15px;
    border:none;
-   padding:10px 50px 10px 50px !important;
-   position:relative !important;
-   top:40px !important;
-   left:370px;
-   border-radius: 5px !important;
+   /* padding:0px 50px 0px 50px !important; */
+
 }
 
 .content{
@@ -40,18 +36,21 @@
    padding:5px;
 }
 
-.person1, .person2{
-   width:16%;
-   height:16%;
+.outputHide{
+   display:none;
 }
 
-.person2{
-   float:right;
+.person1, .person2{
+   width:50%;
+   height:50%;
+}
+
+/* .person2{
    margin-right:20px;
+   margin-top:-280px;
 }
 
 .person1{
-   float:left;
    margin-top:10px;
    margin-left:10px;
-}
+} */

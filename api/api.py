@@ -5,7 +5,7 @@ from flask import request
 app = Flask(__name__)
 
 @app.route('/decode', methods=['POST'])
-def calculate_ceaser():
+def decode_ceaser():
     data= request.get_json()
     user_input = data['text'].upper()
     special_characters = "\"\'!\@#$%^&*()-+?_=,<>/"
@@ -26,5 +26,22 @@ def calculate_ceaser():
         brute_force_outputs.append(current_string)
     return {'answers':brute_force_outputs}
 
-# def get_current_time():
-#     return {'time': time.time()}
+@app.route('/encode', methods=['POST'])
+def encode_ceaser():
+    data= request.get_json()
+    user_text = data['text'].lower()
+    user_shift = data['shift']
+    special_characters = "\"\'!\@#$%^&*()-+?_=,<>/"
+
+    encoded_string = ""
+    for i in user_text:
+        if i == " ":
+            encoded_string = encoded_string + " "
+            continue
+        if i in special_characters:
+            encoded_string = encoded_string + i
+            continue
+        temp = ((ord(i)-97)+user_shift)%26
+        encoded_string = encoded_string+chr(temp+66)
+        
+    return {'answer':encoded_string}
