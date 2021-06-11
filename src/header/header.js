@@ -3,13 +3,9 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import Image from 'react-bootstrap/Image';
 import CaeserDisk from '../Assets/wheel_img.jpg';
 import cssClasses from './header.module.css';
 import { withRouter } from 'react-router-dom';
-import Axios from 'axios';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -29,15 +25,12 @@ const ButtonAppBar= (props)=> {
       <AppBar position="static" className={classes.AppBar}>
         <Toolbar className={cssClasses.Toolbar}>
 
-          <img src={CaeserDisk} className={cssClasses.diskImg}/> 
+          <img src={CaeserDisk} alt={"Ceaser Disk"} className={cssClasses.diskImg}/> 
                  
           <Typography 
           variant="h6" 
           className={cssClasses.typography}>
-            <a 
-            className={cssClasses.title}>
               Ceaser Decoder
-            </a>
           </Typography>
         </Toolbar>
       </AppBar>

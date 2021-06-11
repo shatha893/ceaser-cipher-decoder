@@ -3,12 +3,12 @@ import Header from '../header/header';
 import Footer from '../footer/footer';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import InputGroup from 'react-bootstrap/InputGroup';
-import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import classes from './MainPage.module.css';
 import Axios from 'axios';
+import Person1 from '../Assets/character-3.svg';
+import Person2 from '../Assets/character-22.svg';
 
 class MainPage extends Component{
   
@@ -27,7 +27,12 @@ class MainPage extends Component{
         })
         .then(res =>{
             console.log(res);
-            this.setState({plainText:res.data.answers})
+            let tempArr= []
+            // eslint-disable-next-line
+            res.data.answers.map(sentence =>{
+                tempArr.push(sentence);
+            });
+            this.setState({plainText:[...tempArr]});
         })
         .catch(error=>{
             console.log("Error in decode request ",error)
@@ -41,10 +46,12 @@ class MainPage extends Component{
             <Header/>
         </Row>
         <Row className={classes.content}>
+            <img src={Person1} className={classes.person1}/>
+            
             <div className={classes.cipherText}>
                 <InputGroup>
                 <InputGroup.Prepend>
-                <InputGroup.Text className={classes.textTitle}>Cipher Text</InputGroup.Text>
+                <InputGroup.Text className={classes.textTitle}>Enter Cipher Text</InputGroup.Text>
                 </InputGroup.Prepend>
                 <Form.Control 
                 as="textarea" 
@@ -57,8 +64,15 @@ class MainPage extends Component{
                 onClick={this.handleDecodeClick}>
                 DECODE
                 </button>
-                <p>{this.state.plainText}</p>
+                <table className={classes.output}>
+                    {this.state.plainText.map((sentence,i)=>( 
+                        <tr>
+                            <th>{i}</th> 
+                            <td> {sentence} </td>
+                        </tr>))}
+                </table>
             </div>
+            <img src={Person2} className={classes.person2}/>
         </Row>
         <Row>
             <Footer></Footer>

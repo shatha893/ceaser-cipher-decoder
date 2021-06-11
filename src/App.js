@@ -2,10 +2,8 @@ import React,{Component} from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
-import Axios from 'axios';
 import MainPage from './MainPage/MainPage';
 
 class App extends Component {
